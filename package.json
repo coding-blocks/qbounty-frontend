@@ -11,8 +11,12 @@
   },
   "repository": "",
   "scripts": {
+    "semantic.build": "cd semantic && gulp build",
+    "semantic.watch": "cd semantic && gulp watch",
+    "prebuild": "npm run semantic.build",
     "build": "ember build",
     "lint:js": "eslint ./*.js app config lib server tests",
+    "prestart": "npm run semantic.watch&",
     "start": "ember serve",
     "test": "ember test"
   },
@@ -40,6 +44,7 @@
     "ember-source": "~2.18.0",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
+    "semantic-ui": "^2.2.14",
     "semantic-ui-ember": "^3.0.0-beta2"
   },
   "engines": {
